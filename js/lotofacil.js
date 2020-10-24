@@ -1,3 +1,4 @@
+// http://loterias.caixa.gov.br/wps/portal/loterias/landing/lotofacil
 var script=document.createElement("script");
 script.setAttribute("type", "text/javascript");
 script.setAttribute("src", "https://code.jquery.com/jquery-3.5.1.slim.min.js");
