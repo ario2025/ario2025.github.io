@@ -15,7 +15,7 @@
           <div class="form-group">
             
             <label>Seus números:</label>
-            <input type="text" class="form-control" id="numeros" onkeydown="verificar(this);" />
+            <input type="text" class="form-control" id="numeros" onkeydown="verificar(this);" onchange="verificar(this);" />
 
             <label>Comparador:</label>
             <input type="text" class="form-control" id="numeros2" />
@@ -36,7 +36,7 @@
       $(document).ready(function(){
         $("#numeros").val( Cookies.get("meuvalorsalvo") );
       });
-      
+
       var verificar=function(element){
           Cookies.set("meuvalorsalvo",$(element).val());
       };
