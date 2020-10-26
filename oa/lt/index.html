@@ -14,10 +14,10 @@
             <h1>Comparador de conjuntos</h1>
             <label>Conjunto A:</label>
             <input type="text" class="form-control" id="conjuntoA" tabindex="1" onchange="verificar(this);" />
-            <p>Tamanho: <span id="lenmeu">0</span></p>
+            <p>Tamanho: <span id="lenA">0</span></p>
             <label>Conjunto B:</label>
             <input type="text" class="form-control" id="conjuntoB" tabindex="2" onkeyup="verificar(this);" onchange="verificar(this);" />
-            <p>Tamanho: <span id="lenmeu2">0</span></p>
+            <p>Tamanho: <span id="lenB">0</span></p>
             <label>Resultado:</label>
             <textarea class="form-control" id="resultado" style="height:200px;" tabindex="3" readonly="readonly"></textarea>
           </div>
@@ -40,8 +40,8 @@
       var verificar=function(element){
         Cookies.set($(element).attr("id"),$(element).val());
         defineFocus();
-        $("#lenmeu").html(qteNumeros($("#conjuntoA").val()));
-        $("#lenmeu2").html(qteNumeros($("#conjuntoB").val()));
+        $("#lenA").html(qteNumeros($("#conjuntoA").val()));
+        $("#lenB").html(qteNumeros($("#conjuntoB").val()));
         var meunum = $("#conjuntoA").val().replace(/_/g,"");
         var conjuntoB = $("#conjuntoB").val().replace(/_/g,"");
         var numA = meunum.split(" ");
@@ -60,7 +60,6 @@
         final += "Conjunto A: " + numA.toString() + ", tamanho: " + qteNumeros(numA.toString()) + "\n";
         final += "Conjunto B: " + numB.toString() + ", tamanho: " + qteNumeros(numB.toString()) + "\n";
         final += "Contém em A e B: " + contemAmbos.toString() + ", tamanho: " + qteNumeros(contemAmbos.toString()) + "\n";
-        final += "Quantidade em A e B: " + contemAmbos.toString() + "\n";
         var resultado = $("#resultado");
         resultado.val( final );
       };
