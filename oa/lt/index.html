@@ -2,6 +2,8 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="../../js/bootstrap/bootstrap.min.css" />
     <title>Selector</title>
@@ -19,7 +21,7 @@
                   <b>A</b> (<span id="lenA" class="form-control-sm">0</span>):
                 </div>
                 <div class="col-sm-10">
-                  <input type="numeric" pattern="\d*" class="form-control" id="conjuntoA" tabindex="1" onchange="verificar(this);" />
+                  <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-control" id="conjuntoA" tabindex="1" onchange="verificar(this);" />
                 </div>
               </div>
 
@@ -28,7 +30,7 @@
                   <b>B</b> (<span id="lenB" class="form-control-sm">0</span>):
                 </div>
                 <div class="col-sm-10">
-                  <input type="numeric" pattern="\d*" class="form-control" id="conjuntoB" tabindex="2" onkeyup="verificar(this);" onchange="verificar(this);" />
+                  <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-control" id="conjuntoB" tabindex="2" onkeyup="verificar(this);" onchange="verificar(this);" />
                 </div>
               </div>
             
